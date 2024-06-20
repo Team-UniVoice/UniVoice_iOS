@@ -1,0 +1,52 @@
+# 문서의 시작
+
+# 코드에 비활성화 하고 싶은 룰이 있다면 해당 코드 바로 상단에
+# swiftlint:disable [룰 이름]과 같이 적어주세요
+
+# ex:
+# swiftlint:disable colon
+# let noWarning :String = ""
+
+
+# 기본 적용되는 룰에서 사용하지 않는 룰
+disabled_rules:
+  - trailing_whitespace                    # 후행 공백
+  - nesting                                # 중첩
+  - unused_closure_parameter               # 미사용 클로저 파라미터 _ 대체
+  - cyclomatic_complexity                  # 순환 복잡성
+  - type_body_length                       # 타입 본문의 행 길이 제한
+  - function_body_length                   # 함수 본문의 행 길이 제한
+  - inclusive_language                     # 포괄적 언어 사용
+  - identifier_name                        # 1~2글자 변수 이름 제한
+  - todo                                   # TODO, FIXME 주석 제한
+  
+  
+# 옵트 인 룰
+opt_in_rules:
+  - closure_end_indentation                # 클로저의 끝 괄호를 시작한 행과의 들여쓰기 맞춤
+  - empty_count                            # count보다 isEmpty 선호
+  - empty_string                           # == ""보다 isEmpty 선호
+  - empty_collection_literal               # == [] 보다 isEmpty 선호
+
+
+# 행 길이 제한 커스텀
+line_length:
+  warning: 150
+  error: 250
+  ignores_urls: true                       # URL에 대해 행 길이 제한 미적용
+  ignores_comments: true                   # 코멘트에 대해 행 길이 제한 미적용
+  ignores_interpolated_strings: true       # 보간된 문자열 행 길이 제한 미적용
+    
+# 파일 길이 제한 커스텀
+file_length:
+  warning: 500
+  error: 800
+  ignore_comment_only_lines: true          # 주석은 줄 계산에서 무시됩니다
+
+# 룰 적용 제외할 파일
+excluded:
+  - KREAM/Application/AppDelegate.swift
+  - KREAM/Application/SceneDelegate.swift
+  
+
+# 문서의 끝
