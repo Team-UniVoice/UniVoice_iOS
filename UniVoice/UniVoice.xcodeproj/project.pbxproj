@@ -54,14 +54,158 @@
 		880ED94D2C23F75B0045A620 /* UniVoice */ = {
 			isa = PBXGroup;
 			children = (
+				880ED9622C23FD980045A620 /* Application */,
+				880ED9632C23FDA00045A620 /* Global */,
+				880ED9652C23FDB30045A620 /* Data */,
+				880ED9642C23FDAF0045A620 /* Domain */,
+				880ED9662C23FDB60045A620 /* Presentation */,
+			);
+			path = UniVoice;
+			sourceTree = "<group>";
+		};
+		880ED9622C23FD980045A620 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				880ED94E2C23F75B0045A620 /* AppDelegate.swift */,
 				880ED9502C23F75B0045A620 /* SceneDelegate.swift */,
 				880ED9522C23F75B0045A620 /* ViewController.swift */,
-				880ED9572C23F75D0045A620 /* Assets.xcassets */,
 				880ED9592C23F75D0045A620 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		880ED9632C23FDA00045A620 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				880ED96A2C23FE3A0045A620 /* Resource */,
+				880ED96B2C23FE400045A620 /* Literal */,
+				880ED96C2C23FE460045A620 /* Extension */,
+				880ED96D2C23FE550045A620 /* Utility */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		880ED9642C23FDAF0045A620 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		880ED9652C23FDB30045A620 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				880ED9692C23FE1E0045A620 /* DTO */,
+				880ED9682C23FE160045A620 /* Router */,
+				880ED9672C23FE0F0045A620 /* Base */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		880ED9662C23FDB60045A620 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				880ED9732C24011A0045A620 /* Components */,
+				880ED96E2C23FEB30045A620 /* Dummy */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		880ED9672C23FE0F0045A620 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		880ED9682C23FE160045A620 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		880ED9692C23FE1E0045A620 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		880ED96A2C23FE3A0045A620 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				880ED9572C23F75D0045A620 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		880ED96B2C23FE400045A620 /* Literal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Literal;
+			sourceTree = "<group>";
+		};
+		880ED96C2C23FE460045A620 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		880ED96D2C23FE550045A620 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
 				880ED95C2C23F75D0045A620 /* Info.plist */,
 			);
-			path = UniVoice;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		880ED96E2C23FEB30045A620 /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				880ED9712C23FED90045A620 /* ViewController */,
+				880ED9702C23FED20045A620 /* ViewModel */,
+				880ED96F2C23FECD0045A620 /* View */,
+			);
+			path = Dummy;
+			sourceTree = "<group>";
+		};
+		880ED96F2C23FECD0045A620 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				880ED9722C23FEE00045A620 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		880ED9702C23FED20045A620 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		880ED9712C23FED90045A620 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		880ED9722C23FEE00045A620 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		880ED9732C24011A0045A620 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = UniVoice/Global/Utility/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -263,6 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = UniVoice/Global/Utility/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -282,7 +428,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UniVoice/Info.plist;
+				INFOPLIST_FILE = UniVoice/Global/Utility/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -312,7 +458,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UniVoice/Info.plist;
+				INFOPLIST_FILE = UniVoice/Global/Utility/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
