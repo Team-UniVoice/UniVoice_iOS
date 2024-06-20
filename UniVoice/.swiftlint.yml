@@ -45,8 +45,8 @@ file_length:
 
 # 룰 적용 제외할 파일
 excluded:
-  - KREAM/Application/AppDelegate.swift
-  - KREAM/Application/SceneDelegate.swift
+  - UniVoice/Application/AppDelegate.swift
+  - UniVoice/Application/SceneDelegate.swift
   
 
 # 문서의 끝
