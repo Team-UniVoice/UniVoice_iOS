@@ -15,7 +15,4 @@ class ViewController: UIViewController {
         
         print("와 이게 되네")
     }
-
-
 }
-
