@@ -49,7 +49,7 @@ final class LoginViewController: UIViewController {
         output.loginState
             .drive(onNext: { [weak self] isUser in
                 if isUser {
-                    self?.navigationController?.pushViewController(ViewController(), animated: true)
+                    self?.navigationController?.pushViewController(WelcomeViewController(), animated: true)
                 } else {
                     let alert = UIAlertController(title: "Error", message: "Login failed", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default))
