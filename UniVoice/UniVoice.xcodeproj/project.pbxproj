@@ -28,6 +28,7 @@
 		882DB15F2C31C94A00D73FEF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB15E2C31C94A00D73FEF /* LoginViewModel.swift */; };
 		882DB1612C31D38300D73FEF /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB1602C31D38300D73FEF /* InitialView.swift */; };
 		882DB1632C31D74100D73FEF /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB1622C31D74100D73FEF /* InitialViewController.swift */; };
+		882DB1652C31D83F00D73FEF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB1642C31D83F00D73FEF /* WelcomeView.swift */; };
 		8851A2722C2404CA006912D4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8851A2712C2404CA006912D4 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		882DB15E2C31C94A00D73FEF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		882DB1602C31D38300D73FEF /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		882DB1622C31D74100D73FEF /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		882DB1642C31D83F00D73FEF /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		8851A2712C2404CA006912D4 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,6 +278,7 @@
 			children = (
 				882DB15A2C31C45400D73FEF /* LoginView.swift */,
 				882DB1602C31D38300D73FEF /* InitialView.swift */,
+				882DB1642C31D83F00D73FEF /* WelcomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				880ED94F2C23F75B0045A620 /* AppDelegate.swift in Sources */,
 				882DB15F2C31C94A00D73FEF /* LoginViewModel.swift in Sources */,
 				882DB15B2C31C45400D73FEF /* LoginView.swift in Sources */,
+				882DB1652C31D83F00D73FEF /* WelcomeView.swift in Sources */,
 				882DB15D2C31C6D200D73FEF /* LoginViewController.swift in Sources */,
 				882DB1612C31D38300D73FEF /* InitialView.swift in Sources */,
 				880ED9512C23F75B0045A620 /* SceneDelegate.swift in Sources */,
