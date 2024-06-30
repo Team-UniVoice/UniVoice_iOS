@@ -24,7 +24,7 @@
 		880ED98D2C2403490045A620 /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 880ED98C2C2403490045A620 /* Differentiator */; };
 		880ED98F2C2403490045A620 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 880ED98E2C2403490045A620 /* RxDataSources */; };
 		8851A2722C2404CA006912D4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8851A2712C2404CA006912D4 /* .swiftlint.yml */; };
-		DC3B1A142C317FC9003FA5C9 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3B1A132C317FC9003FA5C9 /* UIColor+.swift */; };
+		DC3B1A162C3182A7003FA5C9 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3B1A152C3182A7003FA5C9 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 		880ED95A2C23F75D0045A620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		880ED95C2C23F75D0045A620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8851A2712C2404CA006912D4 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		DC3B1A132C317FC9003FA5C9 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		DC3B1A152C3182A7003FA5C9 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +177,7 @@
 		880ED96C2C23FE460045A620 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DC3B1A132C317FC9003FA5C9 /* UIColor+.swift */,
+				DC3B1A152C3182A7003FA5C9 /* UIColor+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -351,9 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				880ED9532C23F75B0045A620 /* ViewController.swift in Sources */,
+				DC3B1A162C3182A7003FA5C9 /* UIColor+.swift in Sources */,
 				880ED94F2C23F75B0045A620 /* AppDelegate.swift in Sources */,
 				880ED9512C23F75B0045A620 /* SceneDelegate.swift in Sources */,
-				DC3B1A142C317FC9003FA5C9 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
