@@ -27,6 +27,7 @@ final class LoginViewModel: ViewModelType {
     
     struct Output {
         let isValid: Driver<Bool>
+        let loginState: Driver<Bool>
     }
     
     var disposeBag = DisposeBag()
@@ -39,6 +40,25 @@ final class LoginViewModel: ViewModelType {
                     }
                     .asDriver(onErrorJustReturn: false)
         
-        return Output(isValid: isValid)
+        let credentials = Observable
+                   .combineLatest(input.idText, input.pwText)
+        
+        let loginState = input.loginButtonDidTap
+            .withLatestFrom(isValid.asObservable())
+            .filter { $0 } // isValid가 true인 경우에만 통과
+            .withLatestFrom(credentials)
+            .flatMapLatest { id, pw in
+                return self.login(id: id, password: pw) //  로그인 로직 호출
+            }
+            .asDriver(onErrorJustReturn: false) 
+        
+        return Output(isValid: isValid, loginState: loginState)
+    }
+}
+
+// MARK: API Logic
+extension LoginViewModel {
+    private func login(id: String, password: String) -> Observable<Bool> {
+        return Observable.just(true).delay(.seconds(1), scheduler: MainScheduler.instance)
     }
 }
