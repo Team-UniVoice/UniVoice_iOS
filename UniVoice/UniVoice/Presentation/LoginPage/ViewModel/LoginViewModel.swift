@@ -50,7 +50,7 @@ final class LoginViewModel: ViewModelType {
             .flatMapLatest { id, pw in
                 return self.login(id: id, password: pw) //  로그인 로직 호출
             }
-            .asDriver(onErrorJustReturn: false) 
+            .asDriver(onErrorJustReturn: false)
         
         return Output(isValid: isValid, loginState: loginState)
     }
@@ -58,7 +58,10 @@ final class LoginViewModel: ViewModelType {
 
 // MARK: API Logic
 extension LoginViewModel {
+    // 대충 API 탔다고 가정
     private func login(id: String, password: String) -> Observable<Bool> {
-        return Observable.just(true).delay(.seconds(1), scheduler: MainScheduler.instance)
+        return id != "Test"
+        ? Observable.just(true).delay(.milliseconds(200), scheduler: MainScheduler.instance)
+        : Observable.just(false).delay(.milliseconds(200), scheduler: MainScheduler.instance)
     }
 }
