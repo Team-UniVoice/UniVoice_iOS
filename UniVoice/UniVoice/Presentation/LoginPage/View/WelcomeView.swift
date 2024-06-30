@@ -65,8 +65,3 @@ final class WelcomeView: UIView {
         }
     }
 }
-
-@available(iOS 17.0, *)
-#Preview {
-    WelcomeView()
-}

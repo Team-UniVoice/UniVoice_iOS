@@ -59,8 +59,3 @@ final class LoginViewController: UIViewController {
             .disposed(by: viewModel.disposeBag)
     }
 }
-
-@available(iOS 17.0, *)
-#Preview {
-    LoginViewController()
-}

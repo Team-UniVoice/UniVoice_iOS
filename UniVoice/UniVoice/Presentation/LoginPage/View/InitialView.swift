@@ -90,8 +90,3 @@ final class InitialView: UIView {
         }
     }
 }
-
-@available(iOS 17.0, *)
-#Preview {
-    InitialView()
-}

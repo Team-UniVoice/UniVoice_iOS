@@ -41,8 +41,3 @@ final class WelcomeViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 }
-
-@available(iOS 17.0, *)
-#Preview {
-    WelcomeViewController()
-}
