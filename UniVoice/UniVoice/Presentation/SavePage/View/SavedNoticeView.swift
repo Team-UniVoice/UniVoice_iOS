@@ -12,6 +12,12 @@ import Then
 final class SavedNoticeView: UIView {
     
     // MARK: Views
+    private let titleLabel = UILabel()
+    lazy var savedCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
+            $0.scrollDirection = .vertical
+        }).then {
+            $0.backgroundColor = .white
+        }
     
     // MARK: Init
     override init(frame: CGRect) {
@@ -34,15 +40,29 @@ final class SavedNoticeView: UIView {
     // MARK: setUpHierarchy
     private func setUpHierarchy() {
         [
-
+            titleLabel,
+            savedCollectionView
         ].forEach { self.addSubview($0) }
     }
     
     // MARK: setUpUI
     private func setUpUI() {
+        titleLabel.do {
+            $0.attributedText = .pretendardAttributedString(for: .H5B, with: "저장한 공지사항")
+        }
     }
     
     // MARK: setUpLayout
     private func setUpLayout() {
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide).offset(16)
+            $0.horizontalEdges.equalToSuperview().inset(16)
+        }
+        
+        savedCollectionView.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(16)
+            $0.horizontalEdges.equalToSuperview()
+            $0.bottom.equalTo(self.safeAreaLayoutGuide)
+        }
     }
 }
