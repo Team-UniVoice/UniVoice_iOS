@@ -57,6 +57,7 @@
 		880ED98F2C2403490045A620 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 880ED98E2C2403490045A620 /* RxDataSources */; };
 		881A3C5B2C3AE6E2003A72E6 /* QuickScanIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A3C5A2C3AE6E2003A72E6 /* QuickScanIndicatorView.swift */; };
 		88293F7B2C42C1D10082A986 /* NoAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88293F7A2C42C1D10082A986 /* NoAccountViewController.swift */; };
+		88293F812C43BBBE0082A986 /* SavedNoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88293F802C43BBBE0082A986 /* SavedNoticeView.swift */; };
 		882DB15B2C31C45400D73FEF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB15A2C31C45400D73FEF /* LoginView.swift */; };
 		882DB15D2C31C6D200D73FEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB15C2C31C6D200D73FEF /* LoginViewController.swift */; };
 		882DB15F2C31C94A00D73FEF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882DB15E2C31C94A00D73FEF /* LoginViewModel.swift */; };
@@ -158,6 +159,7 @@
 		880ED95C2C23F75D0045A620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		881A3C5A2C3AE6E2003A72E6 /* QuickScanIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickScanIndicatorView.swift; sourceTree = "<group>"; };
 		88293F7A2C42C1D10082A986 /* NoAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoAccountViewController.swift; sourceTree = "<group>"; };
+		88293F802C43BBBE0082A986 /* SavedNoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedNoticeView.swift; sourceTree = "<group>"; };
 		882DB15A2C31C45400D73FEF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		882DB15C2C31C6D200D73FEF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		882DB15E2C31C94A00D73FEF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				EDE8CA182C37C3B700E828F1 /* SignUpPage */,
 				882DB1562C31C35B00D73FEF /* LoginPage */,
 				DC33DAF42C39C75E008B321E /* MainHome */,
+				88293F7C2C43BB710082A986 /* SavePage */,
 				880ED9732C24011A0045A620 /* Components */,
 				880ED96E2C23FEB30045A620 /* Dummy */,
 			);
@@ -502,6 +505,38 @@
 				88AB980B2C3F04B300AC5043 /* ChipContentView.swift */,
 				88AB98072C3ECAB900AC5043 /* QuickScanView.swift */,
 				88AB98162C41749D00AC5043 /* QuickScanCompletionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88293F7C2C43BB710082A986 /* SavePage */ = {
+			isa = PBXGroup;
+			children = (
+				88293F7F2C43BBA60082A986 /* View */,
+				88293F7E2C43BBA30082A986 /* ViewModel */,
+				88293F7D2C43BB9D0082A986 /* ViewController */,
+			);
+			path = SavePage;
+			sourceTree = "<group>";
+		};
+		88293F7D2C43BB9D0082A986 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		88293F7E2C43BBA30082A986 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88293F7F2C43BBA60082A986 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88293F802C43BBBE0082A986 /* SavedNoticeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,6 +877,7 @@
 				88325C342C38762D004A293D /* UITextField+.swift in Sources */,
 				880ED94F2C23F75B0045A620 /* AppDelegate.swift in Sources */,
 				21F7B1602C34748700A082D8 /* UIButton+.swift in Sources */,
+				88293F812C43BBBE0082A986 /* SavedNoticeView.swift in Sources */,
 				DC91FACF2C42E4710095DD5E /* TabBarVC.swift in Sources */,
 				EDE8CA282C37C59800E828F1 /* UniversityInputVC.swift in Sources */,
 				21F7B15E2C3473C500A082D8 /* UILabel+.swift in Sources */,
