@@ -66,7 +66,7 @@ final class ArticleCVC: UICollectionViewCell {
         chipView.do {
             $0.backgroundColor = .clear
             $0.clipsToBounds = true
-            $0.layer.cornerRadius = 10
+            $0.layer.cornerRadius = 8
             $0.layer.borderWidth = 1
             $0.layer.borderColor = UIColor.regular.cgColor
         }
@@ -106,7 +106,7 @@ final class ArticleCVC: UICollectionViewCell {
     private func setUpLayout() {
         chipView.snp.makeConstraints {
             $0.top.equalToSuperview()
-            $0.leading.equalToSuperview().offset(16)
+            $0.leading.equalToSuperview().offset(4)
             $0.height.equalTo(16)
             $0.width.equalTo(20)
         }
@@ -119,7 +119,7 @@ final class ArticleCVC: UICollectionViewCell {
         }
         thumbnailImage.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(4)
             $0.size.equalTo(58)
         }
         duration.snp.makeConstraints {
@@ -170,9 +170,20 @@ extension ArticleCVC {
         chipView.snp.removeConstraints()
         chipView.snp.makeConstraints {
             $0.top.equalToSuperview()
-            $0.leading.equalToSuperview().offset(16)
+            $0.leading.equalToSuperview().offset(4)
             $0.height.equalTo(16)
             $0.width.equalTo(width + 14)
         }
     }
+}
+
+@available(iOS 17.0, *)
+#Preview {
+    PreviewController(ArticleCVC(), snp: { view in
+        view.snp.makeConstraints {
+            $0.height.equalTo(78)
+            $0.horizontalEdges.equalToSuperview().inset(16)
+            $0.center.equalToSuperview()
+        }
+    })
 }
