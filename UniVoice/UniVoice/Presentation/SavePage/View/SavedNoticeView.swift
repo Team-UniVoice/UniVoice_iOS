@@ -14,10 +14,11 @@ final class SavedNoticeView: UIView {
     // MARK: Views
     private let titleLabel = UILabel()
     lazy var savedCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
-            $0.scrollDirection = .vertical
-        }).then {
-            $0.backgroundColor = .white
-        }
+        $0.scrollDirection = .vertical
+        $0.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 12, right: 0)
+    }).then {
+        $0.backgroundColor = .white
+    }
     
     // MARK: Init
     override init(frame: CGRect) {
@@ -60,7 +61,7 @@ final class SavedNoticeView: UIView {
         }
         
         savedCollectionView.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(16)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(32)
             $0.horizontalEdges.equalToSuperview()
             $0.bottom.equalTo(self.safeAreaLayoutGuide)
         }
