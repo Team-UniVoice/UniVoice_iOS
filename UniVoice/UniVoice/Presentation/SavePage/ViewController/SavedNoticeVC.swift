@@ -14,7 +14,7 @@ final class SavedNoticeVC: UIViewController {
     
     // MARK: Views
     private let rootView = SavedNoticeView()
-    private let disposeBag = DisposeBag()
+    private let viewModel = SavedNoticeVM()
     
     // MARK: Life Cycle - loadView
     override func loadView() {
@@ -25,15 +25,17 @@ final class SavedNoticeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpFoundation()
-        bindCollectionView()
+        bindUI()
     }
     
     func setUpFoundation() {
         rootView.savedCollectionView.register(ArticleCVC.self, forCellWithReuseIdentifier: ArticleCVC.identifier)
+        rootView.savedCollectionView.rx.setDelegate(self).disposed(by: viewModel.disposeBag)
     }
     
-    func bindCollectionView() {
-        rootView.savedCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
+    func bindUI() {
+        let input = SavedNoticeVM.Input(refreshEvent: .just(Void()))
+        let output = viewModel.transform(input: input)
         
         let articleDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, Article>>(configureCell: { dataSource, collectionView, indexPath, viewModel in
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArticleCVC.identifier, for: indexPath) as? ArticleCVC else {
@@ -43,23 +45,10 @@ final class SavedNoticeVC: UIViewController {
             return cell
         })
         
-        let mockData: Observable<[Article]> = Observable.just([
-            Article(council: "총학생회", chip: "공지사항", articleTitle: "명절 귀향 버스 수요 조사", thumbnailImage: nil, duration: "2023/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "총학생회", chip: "공지사항", articleTitle: "간식 먹고, 열공하자!", thumbnailImage: UIImage(named: "defaultImage"), duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "공과대학 학생회", chip: "선착순 이벤트", articleTitle: "아요 파이팅", thumbnailImage: nil, duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "공과대학 학생회", chip: "선착순 이벤트", articleTitle: "기획 파이팅", thumbnailImage: UIImage(named: "defaultImage"), duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "공과대학 학생회", chip: "공지사항", articleTitle: "디자인 파이팅", thumbnailImage: UIImage(named: "defaultImage"), duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "공과대학 학생회", chip: "공지사항", articleTitle: "안드 파이팅", thumbnailImage: UIImage(named: "defaultImage"), duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "공과대학 학생회", chip: "공지사항", articleTitle: "서버 파이팅", thumbnailImage: UIImage(named: "defaultImage"), duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "공과대학 학생회", chip: "공지사항", articleTitle: "명절 귀향 버스 수요 조사", thumbnailImage: UIImage(named: "defaultImage"), duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "공과대학 학생회", chip: "공지사항", articleTitle: "명절 귀향 버스 수요 조사", thumbnailImage: UIImage(named: "defaultImage"), duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-            Article(council: "공과대학 학생회", chip: "공지사항", articleTitle: "명절 귀향 버스 수요 조사", thumbnailImage: UIImage(named: "defaultImage"), duration: "2024/12/23", likedNumber: 10, savedNumber: 7),
-        ])
-        
-        mockData
+        output.listData
             .map { [SectionModel(model: "Section 0", items: $0)] }
-            .bind(to: rootView.savedCollectionView.rx.items(dataSource: articleDataSource))
-            .disposed(by: disposeBag)
+            .drive(rootView.savedCollectionView.rx.items(dataSource: articleDataSource))
+            .disposed(by: viewModel.disposeBag)
     }
 }
 
